@@ -58,7 +58,7 @@ h1 {
 #expense-table th,
 #expense-table td {
   padding: 8px;
-  border: 1px solid #ddd;
+  border: 3px solid #ddd;
 }
 
 #expense-table tfoot td {
