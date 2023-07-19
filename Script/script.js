@@ -20,7 +20,6 @@ function addExpense()
     
     
     expenseItem.find(".delete-btn").click(function () {
-
         expenseItem.remove()
     })
     
@@ -34,7 +33,7 @@ function addExpense()
 
 function updateTotal() {
     const amountInput = $("#expense-amount");
-    total = parseInt(amountInput.val())+ total
+    total = parseInt(amountInput.val())+ total 
     $("#total-amount").text(total)
 
 }
@@ -43,7 +42,6 @@ $(document).ready(function () {
     
     const addButton = $("#add-expense-btn");
     addButton.click(addExpense);
-    addButton.click(updateTotal);
 
     $("#expense-name").keyup(function (event) {
         if (event.keyCode === 13) {
