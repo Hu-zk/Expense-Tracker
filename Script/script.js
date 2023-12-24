@@ -20,20 +20,20 @@ function addExpense()
     
     
     expenseItem.find(".delete-btn").click(function () {
+        updateTotal(parseInt(expenseItem.find(".amount").text())*-1);
         expenseItem.remove()
     })
     
     expenseList.append(expenseItem)
     
-    updateTotal();
+    updateTotal(parseInt(amountInput.val()));
     expenseInput.val("");
     amountInput.val("");
     
 }
 
-function updateTotal() {
-    const amountInput = $("#expense-amount");
-    total = parseInt(amountInput.val())+ total 
+function updateTotal(amount) {
+    total = amount + total 
     $("#total-amount").text(total)
 
 }
